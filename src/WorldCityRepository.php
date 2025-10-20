@@ -23,6 +23,14 @@ class WorldCityRepository
         );
     }
 
+    public function count()
+    {
+        $stmt = $this->pdo->prepare("SELECT COUNT(*) AS `count` FROM `worldcities`");
+        $stmt->execute();
+        $count = $stmt->fetch(PDO::FETCH_ASSOC);
+        return $count['count'];
+    }
+
     // to fetch all models with pagination
     public function pagination(int $page = 1, int $limit = 10): array
     {

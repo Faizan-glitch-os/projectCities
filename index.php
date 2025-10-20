@@ -8,4 +8,5 @@ $page = empty($_GET['page']) ? 1 : $_GET['page'];
 $limit = empty($_GET['limit']) ? 10 : $_GET['limit'];
 
 $entries = $WorldCityRepository->pagination($page, $limit);
+var_dump($WorldCityRepository->count());
 render('index', ['entries' => $entries]);
