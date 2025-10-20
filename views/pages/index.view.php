@@ -1,1 +1,5 @@
-<h1>I'm the index.view.php!</h1>
+<ul>
+    <?php foreach ($entries as $city): ?>
+        <li><?= $city->capital ?> (<?= $city->country ?>)</li>
+    <?php endforeach ?>
+</ul>
