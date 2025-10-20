@@ -10,7 +10,7 @@ function render($view, $params)
     extract($params);
 
     ob_start();
-    require __DIR__ . '/../views/pages/' . $view . '.php';
+    require __DIR__ . '/../views/pages/' . $view . '.view.php';
     $contents = ob_get_clean();
 
     require __DIR__ . '/../views/layouts/main.view.php';
