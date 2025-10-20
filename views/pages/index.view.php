@@ -6,6 +6,9 @@
 ?>
 <ul>
     <?php foreach ($entries as $city): ?>
-        <li><a href="city.php?<?= http_build_query(['id' => $city->id]) ?>"><?= $city->getCityCountry() ?></a></li>
+        <li>
+            <a href="city.php?<?= http_build_query(['id' => $city->id]) ?>"><?= $city->getCityCountry() ?> <?= $city->flag() ?>
+            </a>
+        </li>
     <?php endforeach ?>
 </ul>
